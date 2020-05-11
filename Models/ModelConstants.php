@@ -1,0 +1,7 @@
+<?php 
+
+//ModelObject Constants
+define("MODELOBJECT_DEFAULT_ID", 0);
+define("MODELOBJECT_DEFAULT_SORTVALUE", 999);
+define("MODELOBJECT_UUID_INSTANCE_PREFIX", "DEV_INSTANCE");
+?>
