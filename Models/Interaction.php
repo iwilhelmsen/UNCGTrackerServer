@@ -1,5 +1,5 @@
 <?php
-
+namespace Models;
 class Interaction extends ModelObject
 {
 	private array $actors;
@@ -7,14 +7,31 @@ class Interaction extends ModelObject
 	private string $endDate;
 	private string $location;
 
-	function function_name()
+	function __construct()
 	{
 		super();
 		$this->setStartDate(date("Y-m-d H:i:s"));
 	}
 
+	function __construct1(int $_id, string $_uuid, bool $_active, int $_sortValue, string $_startDate, string $_endDate, string $_location)
+	{
+		$this->setId($_id);
+		$this->setUuid($_uuid);
+		$this->setActive($_active);
+		$this->setSortValue($_sortValue);
+		$this->setStartDate($_startDate);
+		$this->setEndDate($_endDate);
+		$this->setLocation($_location);
+	}
+
+	function loadActors()
+	{
+		//TODO stubbed
+	}
+
 	// ======================Getters==================/
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getActors()
@@ -23,6 +40,7 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getStartDate()
@@ -31,6 +49,7 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getEndDate()
@@ -39,14 +58,17 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getLocation()
 	{
 		return $this->location;
 	}
+
 	// ======================Setters==================/
 	/**
+	 *
 	 * @param mixed $actors
 	 */
 	public function setActors(array $_actors)
@@ -55,6 +77,7 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @param mixed $startDate
 	 */
 	public function setStartDate(string $_startDate)
@@ -63,6 +86,7 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @param mixed $endDate
 	 */
 	public function setEndDate(string $_endDate)
@@ -71,6 +95,7 @@ class Interaction extends ModelObject
 	}
 
 	/**
+	 *
 	 * @param mixed $location
 	 */
 	public function setLocation(string $_location)

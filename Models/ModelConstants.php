@@ -1,5 +1,5 @@
 <?php 
-
+namespace Models;
 //ModelObject Constants
 define("MODELOBJECT_DEFAULT_ID", 0);
 define("MODELOBJECT_DEFAULT_SORTVALUE", 999);

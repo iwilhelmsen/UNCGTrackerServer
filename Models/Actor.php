@@ -1,16 +1,16 @@
 <?php
-
+namespace Models;
 class Actor extends ModelObject
 {
 	private int $participantId;
 	private float $distance;
 
-	function Actor()
+	function __construct1()
 	{
 		super();
 	}
 
-	/* function Actor(int $_id, string $_uuid, bool $_active, int $_sortValue, int $_participantId, float $_distance)
+	function __construct2(int $_id, string $_uuid, bool $_active, int $_sortValue, int $_participantId, float $_distance)
 	{
 		$this->setId($_id);
 		$this->setUuid($_uuid);
@@ -18,7 +18,7 @@ class Actor extends ModelObject
 		$this->setSortValue($_sortValue);
 		$this->setParticipantId($_participantId);
 		$this->setDistance($_distance);
-	} */
+	}
 
 	// ======================Getters==================/
 	/**

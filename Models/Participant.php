@@ -1,42 +1,48 @@
-<?php 
-
+<?php
+namespace Models;
 class Participant extends ModelObject
 {
-	private string $username;
+	private string $userName;
 	private int $participantStatus;
 	private array $interactions;
 
-	function Participant() {
+	function __construct()
+	{
 		super();
 	}
 
-	/* function Participant($_id, $_uuid, $_active, $_sortValue, $_userName, $_participantStatus) {
+	function __construct1($_id, $_uuid, $_active, $_sortValue, $_userName, $_participantStatus)
+	{
 		$this->setId($_id);
 		$this->setUuid($_uuid);
 		$this->setActive($_active);
 		$this->setSortValue($_sortValue);
-		$this->setUsername($_username);
+		$this->setUserName($_userName);
 		$this->setParticipantStatus($_participantStatus);
-	} */
+	}
 
 	function loadInteractions()
 	{
-		//TODO stubbed
+		// TODO stubbed
 	}
+
 	function loadByUserName($_userName)
 	{
-		//TODO stubbed
+		// TODO stubbed
 	}
+
 	// ======================Getters==================/
 	/**
+	 *
 	 * @return mixed
 	 */
-	public function getUsername()
+	public function getUserName()
 	{
-		return $this->username;
+		return $this->userName;
 	}
 
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getParticipantStatus()
@@ -45,6 +51,7 @@ class Participant extends ModelObject
 	}
 
 	/**
+	 *
 	 * @return mixed
 	 */
 	public function getInteractions()
@@ -54,14 +61,16 @@ class Participant extends ModelObject
 
 	// ======================Setters==================/
 	/**
+	 *
 	 * @param mixed $username
 	 */
-	public function setUsername($_username)
+	public function setUserName($_username)
 	{
-		$this->username = $_username;
+		$this->userName = $_username;
 	}
 
 	/**
+	 *
 	 * @param mixed $participantStatus
 	 */
 	public function setParticipantStatus($_participantStatus)
@@ -70,6 +79,7 @@ class Participant extends ModelObject
 	}
 
 	/**
+	 *
 	 * @param mixed $interactions
 	 */
 	public function setInteractions($_interactions)

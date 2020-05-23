@@ -1,5 +1,6 @@
 <?php
-require ("ModelConstants.php");
+namespace Models;
+//require ("ModelConstants.php");
 
 // includes area.
 abstract class ModelObject
@@ -9,7 +10,7 @@ abstract class ModelObject
 	protected bool $active = true;
 	protected int $sortValue = MODELOBJECT_DEFAULT_SORTVALUE;
 
-	function ModelObject()
+	function __constructor()
 	{
 		$this->generateUUID();
 	}
